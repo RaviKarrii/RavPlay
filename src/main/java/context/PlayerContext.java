@@ -1,9 +1,11 @@
 package context;
 
+import java.io.File;
+
 public class PlayerContext {
 
     private static PlayerContext playerInstance = null;
-    private String fileName;
+    private File file;
     private String fileType;
 
     public static PlayerContext getInstance()
@@ -14,12 +16,12 @@ public class PlayerContext {
         return playerInstance;
     }
 
-    public String getFileName(){
-        return fileName;
+    public File getFile(){
+        return file;
     }
 
-    public void setFileName(String fileName){
-        this.fileName = fileName;
+    public void setFile(File file){
+        this.file = file;
     }
 
     public String getFileType(){
